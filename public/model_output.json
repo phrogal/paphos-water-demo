@@ -1,0 +1,15 @@
+{
+  "last_updated": "2026-10-05 18:48:02 UTC",
+  "live_weather": {
+    "temperature": 22.3,
+    "humidity": 64,
+    "precipitation": 0.0
+  },
+  "paphos_center_demand": 5.16,
+  "active_tourist_load": 32500,
+  "reservoir_status": {
+    "total_capacity_mcm": 51.7,
+    "current_storage_mcm": 38.4,
+    "storage_percentage": 74.3
+  }
+}
