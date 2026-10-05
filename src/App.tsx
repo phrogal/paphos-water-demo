@@ -618,10 +618,10 @@ export default function App() {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-          <button onClick={() => setActiveTab('map')} style={navBtnStyle(activeTab === 'map')}>🗺️ Interactive Map</button>
-          <button onClick={() => setActiveTab('forecast')} style={navBtnStyle(activeTab === 'forecast')}>📈 Macro Forecasts</button>
-          <button onClick={() => setActiveTab('dams')} style={navBtnStyle(activeTab === 'dams')}>💧 Dam Reserves</button>
-          <button onClick={() => setActiveTab('leaks')} style={navBtnStyle(activeTab === 'leaks')}>🚨 AI Variance Monitor</button>
+          <button onClick={() => setActiveTab('map')} style={navBtnStyle(activeTab === 'map')}>Interactive Map</button>
+          <button onClick={() => setActiveTab('forecast')} style={navBtnStyle(activeTab === 'forecast')}>Macro Forecasts</button>
+          <button onClick={() => setActiveTab('dams')} style={navBtnStyle(activeTab === 'dams')}>Dam Reserves</button>
+          <button onClick={() => setActiveTab('leaks')} style={navBtnStyle(activeTab === 'leaks')}>AI Variance Monitor</button>
         </div>
       </nav>
 
