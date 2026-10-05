@@ -1,5 +1,7 @@
 /* Import Leaflet CSS so the map renders correctly */
 @import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@import "tailwindcss";
+
 
 :root {
   --text: #6b6375;

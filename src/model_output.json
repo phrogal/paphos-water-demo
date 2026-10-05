@@ -1,0 +1,136 @@
+{
+  "last_updated": "2026-10-05 19:32:25 UTC",
+  "live_weather": {
+    "temperature": 22.0,
+    "humidity": 67,
+    "precipitation": 0.0
+  },
+  "paphos_center_demand": 5.16,
+  "active_tourist_load": 32500,
+  "reservoir_status": {
+    "total_capacity_mcm": 78.48,
+    "current_storage_mcm": 55.95,
+    "storage_percentage": 71.3
+  },
+  "zones": [
+    {
+      "id": 1,
+      "name": "Paphos Center",
+      "lat": 34.7754,
+      "lng": 32.4245,
+      "basePop": 36000,
+      "currentYearVal": 5.16,
+      "lastYearVal": 3.9,
+      "status": "Optimal",
+      "diffText": "+7.7% vs last year",
+      "isHigher": true
+    },
+    {
+      "id": 2,
+      "name": "Peyia",
+      "lat": 34.8822,
+      "lng": 32.3831,
+      "basePop": 11500,
+      "currentYearVal": 2.8,
+      "lastYearVal": 2.5,
+      "status": "Medium Demand",
+      "diffText": "+12.0% vs last year",
+      "isHigher": true
+    },
+    {
+      "id": 3,
+      "name": "Chloraka",
+      "lat": 34.8015,
+      "lng": 32.4112,
+      "basePop": 9500,
+      "currentYearVal": 1.9,
+      "lastYearVal": 2.1,
+      "status": "Optimal",
+      "diffText": "-9.5% vs last year",
+      "isHigher": false
+    },
+    {
+      "id": 4,
+      "name": "Polis Chrysochous",
+      "lat": 35.0367,
+      "lng": 32.4267,
+      "basePop": 3000,
+      "currentYearVal": 1.1,
+      "lastYearVal": 1.0,
+      "status": "Low Reserve",
+      "diffText": "+10.0% vs last year",
+      "isHigher": true
+    }
+  ],
+  "dams": [
+    {
+      "id": 1,
+      "name": "Asprokremmos Dam",
+      "lat": 34.7242,
+      "lng": 32.5456,
+      "capacity": "52.3M m\u00b3",
+      "storage": "38.5M m\u00b3",
+      "percentage": 73.6,
+      "currentYearVal": 38.5,
+      "lastYearVal": 41.2,
+      "status": "Optimal Supply",
+      "diffText": "Decrease of 2.7M m\u00b3 from last year"
+    },
+    {
+      "id": 2,
+      "name": "Evretou Dam",
+      "lat": 34.9667,
+      "lng": 32.5,
+      "capacity": "24.0M m\u00b3",
+      "storage": "16.8M m\u00b3",
+      "percentage": 70.0,
+      "currentYearVal": 16.8,
+      "lastYearVal": 15.5,
+      "status": "Stable",
+      "diffText": "Increase of 1.3M m\u00b3 from last year"
+    },
+    {
+      "id": 3,
+      "name": "Mavrokolympos Dam",
+      "lat": 34.8565,
+      "lng": 32.4058,
+      "capacity": "2.18M m\u00b3",
+      "storage": "0.65M m\u00b3",
+      "percentage": 29.8,
+      "currentYearVal": 0.65,
+      "lastYearVal": 0.85,
+      "status": "Low Reserve",
+      "diffText": "Decrease of 0.20M m\u00b3 from last year"
+    }
+  ],
+  "history": [
+    {
+      "Year": "2020",
+      "Simulated_Water_Demand_m3": 11200000
+    },
+    {
+      "Year": "2021",
+      "Simulated_Water_Demand_m3": 11500000
+    },
+    {
+      "Year": "2022",
+      "Simulated_Water_Demand_m3": 12100000
+    },
+    {
+      "Year": "2023",
+      "Simulated_Water_Demand_m3": 12800000
+    },
+    {
+      "Year": "2024",
+      "Simulated_Water_Demand_m3": 13400000
+    },
+    {
+      "Year": "2025",
+      "Simulated_Water_Demand_m3": 13900000
+    },
+    {
+      "Year": "2026",
+      "Simulated_Water_Demand_m3": 14500000
+    }
+  ]
+}
