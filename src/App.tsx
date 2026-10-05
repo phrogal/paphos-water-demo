@@ -502,7 +502,7 @@ const PAPHOS_DAMS = [
 export default function App() {
   const [activeTab, setActiveTab] = useState<'map' | 'forecast' | 'dams' | 'leaks'>('map');
   const [forecastFrequency, setForecastFrequency] = useState<'monthly' | 'weekly' | 'daily'>('monthly');
-  const [forecast, setForecast] = useState<any[]>([]);
+  const [, setForecast] = useState<any[]>([]);
   const [waterHistory, setWaterHistory] = useState<any[]>([]);
 
   useEffect(() => {
