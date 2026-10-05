@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
 import L from 'leaflet';
@@ -49,7 +49,6 @@ export default function App() {
 
   const zones = modelData.zones || [];
   const dams = modelData.dams || [];
-  const waterHistory = modelData.history || [];
 
   // Compute totals for sidebar summary
   const totalZoneCurrent = zones.reduce((acc: number, z: any) => acc + (z.currentYearVal || 0), 0);
@@ -256,6 +255,9 @@ export default function App() {
             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)', border: '1px solid #e2e8f0', marginTop: '1rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                 <h4 style={{ margin: 0, color: '#1e293b', textTransform: 'capitalize' }}>{forecastTimeframe} Trend Comparison</h4>
+                <span style={{ fontSize: '0.75rem', color: '#64748b', background: '#f1f5f9', padding: '4px 8px', borderRadius: '4px' }}>
+                  🟢 Forecast vs 🔵 Last Year Actual
+                </span>
               </div>
 
               <div style={{ width: '100%', height: 350 }}>
@@ -301,7 +303,7 @@ export default function App() {
           </div>
         )}
 
-       {activeTab === 'leaks' && (
+        {activeTab === 'leaks' && (
           <div style={{ padding: '2rem', overflowY: 'auto', height: '100%', background: '#f8fafc' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div>
