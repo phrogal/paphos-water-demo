@@ -111,7 +111,7 @@ export default function App() {
       
       {/* SIDE NAVBAR */}
       <nav style={{ width: '280px', background: '#ffffff', color: '#1e293b', display: 'flex', flexDirection: 'column', padding: '1.5rem 1rem', zIndex: 1000, borderRight: '1px solid #e2e8f0', boxShadow: '4px 0 10px rgba(0,0,0,0.03)', overflowY: 'auto' }}>
-        <h2 style={{ fontSize: '1.2rem', marginBottom: '0.2rem', textAlign: 'center', color: '#1e3a8a' }}>Paphos Water Intel</h2>
+        <h2 style={{ fontSize: '1.2rem', marginBottom: '0.2rem', textAlign: 'center', color: '#1e3a8a' }}>Paphos Water Dashboard</h2>
         <p style={{ fontSize: '0.7rem', color: '#64748b', textAlign: 'center', marginBottom: '1.2rem' }}>Multi-Area Telemetry & Forecasts</p>
         
         <div style={{ background: '#f8fafc', border: '1px solid #cbd5e1', padding: '0.9rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
@@ -255,9 +255,6 @@ export default function App() {
             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)', border: '1px solid #e2e8f0', marginTop: '1rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                 <h4 style={{ margin: 0, color: '#1e293b', textTransform: 'capitalize' }}>{forecastTimeframe} Trend Comparison</h4>
-                <span style={{ fontSize: '0.75rem', color: '#64748b', background: '#f1f5f9', padding: '4px 8px', borderRadius: '4px' }}>
-                  🟢 Forecast vs 🔵 Last Year Actual
-                </span>
               </div>
 
               <div style={{ width: '100%', height: 350 }}>
@@ -311,7 +308,7 @@ export default function App() {
                 <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '4px 0 0' }}>Detects anomalous consumption spikes and assesses potential pipeline leak risks.</p>
               </div>
               <span style={{ background: '#fef2f2', color: '#991b1b', border: '1px solid #fecaca', padding: '6px 12px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold' }}>
-                ⚠️ 1 High-Risk Leak Alert Active
+                1 High-Risk Leak Alert Active
               </span>
             </div>
 
@@ -327,11 +324,11 @@ export default function App() {
                         <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#dcfce7', color: '#15803d', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>Zone</span>
                         {isHighVariance ? (
                           <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#fee2e2', color: '#991b1b', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>
-                            🚨 Potential Major Leak / Burst
+                            Potential Major Leak / Burst
                           </span>
                         ) : isMediumVariance ? (
                           <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#fef3c7', color: '#92400e', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>
-                            ⚡ Minor Flow Anomaly
+                            Minor Flow Anomaly
                           </span>
                         ) : (
                           <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#f1f5f9', color: '#475569', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>
