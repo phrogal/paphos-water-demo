@@ -564,7 +564,7 @@ export default function App() {
       {/* SIDE NAVBAR (WHITE THEME) */}
       <nav style={{ width: '280px', background: '#ffffff', color: '#1e293b', display: 'flex', flexDirection: 'column', padding: '1.5rem 1rem', zIndex: 1000, borderRight: '1px solid #e2e8f0', boxShadow: '4px 0 10px rgba(0,0,0,0.03)', overflowY: 'auto' }}>
         <h2 style={{ fontSize: '1.2rem', marginBottom: '0.2rem', textAlign: 'center', color: '#1e3a8a' }}>Paphos Water Intel</h2>
-        <p style={{ fontSize: '0.7rem', color: '#64748b', textAlign: 'center', marginBottom: '1.2rem' }}>Gradient Boosting Engine</p>
+        <p style={{ fontSize: '0.7rem', color: '#64748b', textAlign: 'center', marginBottom: '1.2rem' }}></p>
         
         {/* COMBINED REGIONAL SUMMARY BOX (WHITE THEME) */}
         <div style={{ background: '#f8fafc', border: '1px solid #cbd5e1', padding: '0.9rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
@@ -621,7 +621,7 @@ export default function App() {
           <button onClick={() => setActiveTab('map')} style={navBtnStyle(activeTab === 'map')}>Interactive Map</button>
           <button onClick={() => setActiveTab('forecast')} style={navBtnStyle(activeTab === 'forecast')}>Macro Forecasts</button>
           <button onClick={() => setActiveTab('dams')} style={navBtnStyle(activeTab === 'dams')}>Dam Reserves</button>
-          <button onClick={() => setActiveTab('leaks')} style={navBtnStyle(activeTab === 'leaks')}>AI Variance Monitor</button>
+          <button onClick={() => setActiveTab('leaks')} style={navBtnStyle(activeTab === 'leaks')}>Variance Monitor</button>
         </div>
       </nav>
 
@@ -680,8 +680,7 @@ export default function App() {
           <div style={{ padding: '2rem', overflowY: 'auto', height: '100%', background: '#f8fafc' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div>
-                <h2>Macro Water Demand & Gradient Booster Forecasts</h2>
-                <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '4px 0 0' }}>Trained using sequential decision-tree residual corrections for seasonal tourist and climate variations.</p>
+                <h2>Water Demand & Forecasts</h2>
               </div>
               
               {/* FREQUENCY SELECTOR */}
@@ -768,8 +767,7 @@ export default function App() {
         {/* TAB 4: LEAKS / VARIANCE MONITOR */}
         {activeTab === 'leaks' && (
           <div style={{ padding: '2rem', overflowY: 'auto', height: '100%' }}>
-            <h2>Gradient Boosting Residual Variance Monitor</h2>
-            <p style={{ color: '#64748b' }}>Real-time tracking of predictive model variance and consumption deviation across Paphos distribution nodes.</p>
+            <h2>Variance Monitor</h2>
             
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem', marginTop: '1.5rem' }}>
               {PAPHOS_ZONES.map((zone, idx) => {
