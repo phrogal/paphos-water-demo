@@ -8,6 +8,8 @@ on:
 jobs:
   run-python-script:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
       - name: Checkout repository
@@ -30,5 +32,5 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
-          git add public/model_output.json
+          git add src/model_output.json
           git diff --quiet && git diff --cached --quiet || (git commit -m "Auto-update model output [skip ci]" && git push)
