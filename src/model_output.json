@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-13 05:29:36 UTC",
+  "last_updated": "2026-10-14 03:33:02 UTC",
   "live_weather": {
-    "temperature": 20.5,
-    "humidity": 72,
+    "temperature": 21.0,
+    "humidity": 66,
     "precipitation": 0.0
   },
   "paphos_center_demand": 5.16,
