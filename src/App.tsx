@@ -305,34 +305,27 @@ export default function App() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div>
                 <h2>District Variance & Leak Monitor</h2>
-                <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '4px 0 0' }}>Detects anomalous consumption spikes and assesses potential pipeline leak risks.</p>
+                <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '4px 0 0' }}>Unsupervised machine learning anomaly detection for pipeline telemetry.</p>
               </div>
               <span style={{ background: '#fef2f2', color: '#991b1b', border: '1px solid #fecaca', padding: '6px 12px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold' }}>
-                1 High-Risk Leak Alert Active
+                {zones.filter((z: any) => z.isAnomaly).length} Detected Anomaly
               </span>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {zones.map((zone: any) => {
-                const isHighVariance = zone.isHigher && parseFloat(zone.diffText) > 10.0;
-                const isMediumVariance = zone.isHigher && parseFloat(zone.diffText) <= 10.0 && parseFloat(zone.diffText) > 5.0;
-
                 return (
                   <div key={zone.id} style={{ background: 'white', padding: '1.5rem', borderRadius: '8px', border: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
                     <div style={{ flex: 1, paddingRight: '1rem' }}>
                       <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '4px' }}>
                         <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#dcfce7', color: '#15803d', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>Zone</span>
-                        {isHighVariance ? (
+                        {zone.isAnomaly ? (
                           <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#fee2e2', color: '#991b1b', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>
-                            Potential Major Leak / Burst
-                          </span>
-                        ) : isMediumVariance ? (
-                          <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#fef3c7', color: '#92400e', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>
-                            Minor Flow Anomaly
+                            Leak Risk
                           </span>
                         ) : (
                           <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', background: '#f1f5f9', color: '#475569', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>
-                            Normal Variance
+                            Normal Distribution
                           </span>
                         )}
                       </div>
@@ -340,9 +333,9 @@ export default function App() {
                       <h3 style={{ margin: '4px 0 2px', color: '#1e3a8a' }}>{zone.name}</h3>
                       <p style={{ fontSize: '0.8rem', color: '#64748b', margin: '0 0 6px' }}>Population: {zone.basePop?.toLocaleString()} | Current Demand: <strong>{zone.currentYearVal}M m³</strong></p>
                       
-                      {isHighVariance && (
+                      {zone.isAnomaly && (
                         <p style={{ fontSize: '0.75rem', color: '#991b1b', margin: 0, background: '#fff5f5', padding: '4px 8px', borderRadius: '4px', borderLeft: '3px solid #dc2626' }}>
-                          <strong>Action Recommended:</strong> Unexplained +12% consumption spike relative to baseline population. Inspect main feeder line meters for continuous nocturnal flow.
+                          <strong>ML Insight:</strong> Multi-variate feature analysis flagged this zone's consumption profile as a structural statistical outlier (Anomaly Score: {zone.anomalyScore}). Inspect feeder line flow.
                         </p>
                       )}
                     </div>

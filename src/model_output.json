@@ -1,12 +1,10 @@
 {
-  "last_updated": "2026-10-14 03:33:02 UTC",
+  "last_updated": "2026-10-14 09:28:08 UTC",
   "live_weather": {
-    "temperature": 21.0,
-    "humidity": 66,
+    "temperature": 22.7,
+    "humidity": 72,
     "precipitation": 0.0
   },
-  "paphos_center_demand": 5.16,
-  "active_tourist_load": 32500,
   "reservoir_status": {
     "total_capacity_mcm": 78.48,
     "current_storage_mcm": 55.95,
@@ -18,24 +16,28 @@
       "name": "Paphos Center",
       "lat": 34.7754,
       "lng": 32.4245,
-      "basePop": 36000,
+      "basePop": 40830,
       "currentYearVal": 5.16,
       "lastYearVal": 3.9,
       "status": "Optimal",
       "diffText": "+7.7% vs last year",
-      "isHigher": true
+      "isHigher": true,
+      "isAnomaly": true,
+      "anomalyScore": -0.047
     },
     {
       "id": 2,
       "name": "Peyia",
       "lat": 34.8822,
       "lng": 32.3831,
-      "basePop": 11500,
+      "basePop": 9205,
       "currentYearVal": 2.8,
       "lastYearVal": 2.5,
       "status": "Medium Demand",
       "diffText": "+12.0% vs last year",
-      "isHigher": true
+      "isHigher": true,
+      "isAnomaly": false,
+      "anomalyScore": 0.109
     },
     {
       "id": 3,
@@ -47,7 +49,9 @@
       "lastYearVal": 2.1,
       "status": "Optimal",
       "diffText": "-9.5% vs last year",
-      "isHigher": false
+      "isHigher": false,
+      "isAnomaly": false,
+      "anomalyScore": 0.016
     },
     {
       "id": 4,
@@ -59,7 +63,9 @@
       "lastYearVal": 1.0,
       "status": "Low Reserve",
       "diffText": "+10.0% vs last year",
-      "isHigher": true
+      "isHigher": true,
+      "isAnomaly": false,
+      "anomalyScore": 0.056
     }
   ],
   "dams": [
